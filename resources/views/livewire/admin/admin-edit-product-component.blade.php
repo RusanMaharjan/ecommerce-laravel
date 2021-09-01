@@ -28,6 +28,9 @@
                                 </label>
                                 <div class="col-md-4">
                                     <input type="text" name="" placeholder="Product Name" class="form-control input-md" wire:model="name" wire:keyup="generateSlug"/>
+                                    @error('name')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -37,6 +40,9 @@
                                 </label>
                                 <div class="col-md-4">
                                     <input type="text" name="" placeholder="Product Slug" class="form-control input-md" wire:model="slug"/>
+                                    @error('slug')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -46,6 +52,9 @@
                                 </label>
                                 <div class="col-md-4">
                                   <textarea class="form-control" placeholder="Short Description" wire:model="short_description"></textarea>
+                                  @error('short_description')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -55,6 +64,9 @@
                                 </label>
                                 <div class="col-md-4">
                                    <textarea class="form-control" placeholder="Description" wire:model="description"></textarea>
+                                   @error('description')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -64,6 +76,9 @@
                                 </label>
                                 <div class="col-md-4"> 
                                     <input type="text" name="" placeholder="Regular Price" class="form-control input-md" wire:model="regular_price"/>
+                                    @error('regular_price')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -73,6 +88,9 @@
                                 </label>
                                 <div class="col-md-4">
                                     <input type="text" name="" placeholder="Sale Price" class="form-control input-md" wire:model="sale_price"/>
+                                    @error('sale_price')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -82,6 +100,9 @@
                                 </label>
                                 <div class="col-md-4">
                                     <input type="text" name="" placeholder="SKU" class="form-control input-md" wire:model="SKU"/>
+                                    @error('SKU')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -94,6 +115,9 @@
                                         <option value="instock">InStock</option>
                                         <option value="outofstock">Out of Stock</option>
                                     </select>
+                                    @error('stock_status')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -115,6 +139,9 @@
                                 </label>
                                 <div class="col-md-4">
                                     <input type="text" name="" placeholder="Quantity" class="form-control input-md" wire:model="quantity"/>
+                                    @error('quantity')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -129,6 +156,9 @@
                                     @else
                                         <img src="{{ asset('assets/images/products') }}/{{ $image }}" width="120px"/>
                                     @endif
+                                    @error('newimage')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -143,6 +173,9 @@
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>                                            
                                         @endforeach
                                     </select>
+                                    @error('category_id')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
