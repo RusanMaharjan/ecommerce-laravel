@@ -76,7 +76,7 @@
 						}
 
 						.fill-heart {
-							color: #ff7007;
+							color: #ff7007 !important;
 						}
 					</style>
 
