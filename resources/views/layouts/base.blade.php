@@ -157,7 +157,7 @@
 									<i class="fa fa-heart" aria-hidden="true"></i>
 									<div class="left-info">
 										@if (Cart::instance('wishlist')->count() > 0)
-											<span class="index">{{ Cart::instance('wishlist')->count() }}</span>
+											<span class="index">{{ Cart::instance('wishlist')->count() }} item</span>
 										@endif
 										<span class="title">Wishlist</span>
 									</div>
@@ -168,7 +168,7 @@
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
 										@if (Cart::instance('cart')->count() > 0)
-											<span class="index">{{Cart::instance('cart')->count()}} item</span>
+											<span class="index">{{ Cart::instance('cart')->count() }} item</span>
 										@endif
 										<span class="title">CART</span>
 									</div>
